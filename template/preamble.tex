@@ -1,0 +1,79 @@
+\documentclass[
+fontsize=12pt,      %% size of the main text
+parskip=\myparskip, %% vertical space between paragraphs (instead of indenting first par-line)
+DIV=calc,           %% calculates a good DIV value for type area; 66 characters/line is great
+headinclude=true,   %% is header part of margin space or part of page content?
+footinclude=false,  %% is footer part of margin space or part of page content?
+open=right,         %% "right" or "left": start new chapter on right or left page
+appendixprefix=true,%% adds appendix prefix; only for book-classes with \backmatter
+bibliography=totoc, %% adds the bibliography to table of contents (without number)
+BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting printout.
+\mylaterality       %% oneside: document is not printed on left and right sides, only right side
+                    %% twoside: document is printed on left and right sides
+]{scrbook}
+
+%% Set paper and border size
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+
+%% UTF8 as input characters; UCS incompatible to biblatex
+\usepackage[utf8]{inputenc}
+
+%% The default setting of the language is American. Please change settings for
+%% additional or alternative languages used in main.tex.
+%% Please note that the default language of the document is the *last* language
+%% which is added to the package options.
+%% To set only parts of your document in a different language as the rest,
+%% use for example\newline\verb+\foreignlanguage{ngerman}{Beispieltext in deutscher Sprache}+\newline
+\usepackage[\mylanguage]{babel}
+
+%% This package defines basic colors. If you want to get rid of colored links
+%% and headings please change corresponding value in main.tex to {0,0,0}.
+%% Used for links and so forth in screen-version
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DispositionColor}{RGB}{\mydispositioncolor}
+
+%% The widely used package to use graphical images within a LaTeX document.
+%% \includegraphics[width=42mm]{figures/image}
+\usepackage[pdftex]{graphicx}
+
+%% For example on title pages you might want to have a logo on the upper right
+%% corner of the first page (only). The package \texttt{eso-pic} is able to
+%% place things on absolute and relative positions on the whole page.
+\usepackage{eso-pic}
+
+%% ========================================================================
+%%%% Typographic settings
+%% ========================================================================
+
+%% If you have to enlarge the distance between two lines of text, you can
+%% increase it using the \texttt{\mylinespread} command in \texttt{main.tex}. By default, it is
+%% deactivated (set to 100~percent). Modify only with caution since it influences the
+%% page layout and could lead to ugly looking documents.
+\linespread{\mylinespread}
+
+%% Reduce space between section and chapter headings
+\RedeclareSectionCommand[
+   beforeskip=0pt,
+   afterskip=1sp
+]{chapter}
+
+\RedeclareSectionCommand[
+   beforeskip=0pt,
+   afterskip=1sp
+]{section}
+
+%% This document template is able to generate an output that uses colorized
+%% headings, captions, page numbers, and links. The color named
+%% `DispositionColor' used in this document is defined near the definition
+%% of package xcolor
+%% The changes required for headings, page numbers and captions are defined
+%% here.
+%% Settings for colored links are handled by the definitions of the
+%% hyperref package
+
+%%\setheadsepline{.4pt}[\color{DispositionColor}]
+%%\renewcommand{\headfont}{\normalfont\sffamily\color{DispositionColor}}
+%%\renewcommand{\pnumfont}{\normalfont\sffamily\color{DispositionColor}}
+\addtokomafont{disposition}{\color{DispositionColor}}
+\addtokomafont{caption}{\color{DispositionColor}\footnotesize}
+\addtokomafont{captionlabel}{\color{DispositionColor}}
