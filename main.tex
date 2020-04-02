@@ -1,0 +1,115 @@
+%% ========================================================================
+%%%% Document settings
+%% ========================================================================
+
+%% How to separate paragraphs: indention ("no") or spacing ("half", "full",
+%% ...).
+\newcommand{\myparskip}{half}
+
+%% Inner binding correction. This value depends on the method which is
+%% being used to bind your printed result. Some techniques do not
+%% require a binding correction at all ("0mm"), other require for
+%% example "5mm". Refer to KOMA script documentation for a detailed
+%% explanation what a binding correction is and how to measure it.
+\newcommand{\myBCOR}{0mm}
+
+%% Either you are creating a document which is printed on both, left pages
+%% and right pages (twoside) or you create a document which is printed
+%% on right pages only (oneside).
+%% e.g. "oneside" or "twoside"
+\newcommand{\mylaterality}{oneside}
+
+%% Color of the headings and so forth in RGB (red,green,blue) values.
+%% e.g. "30,103,182" (blue/turquois), "0,0,0" (black), ...
+\newcommand{\mydispositioncolor}{22,72,154}
+
+%% Line spacing in %/100. For example 1.5 means 150% of the usual line
+%% spacing. Please use with caution: 100% ("1.0") is fine because the
+%% font was designed for it.
+%% e.g. 1.0, 1.5, 2.0
+\newcommand{\mylinespread}{1.5}
+
+\newcommand{\mycolorlinks}{true}  %% "true" or "false"
+%% Enables or disables colored links (hyperref package).
+% turn on/off colored links (on: better for
+                          % on-screen reading; off: better for printout versions)
+
+%% See babel documentation for further details.
+%% NOTE: The *last* language is the active one!
+%% "english,ngerman", "ngerman,english", ...
+\newcommand{\mylanguage}{american,ngerman}
+
+%% ========================================================================
+%%%% Document metadata
+%% ========================================================================
+
+%% Student:
+\newcommand{\myauthor}{Max Mustermann}
+\newcommand{\myhomestreet}{Musterstraße 1}
+\newcommand{\myhomepostalnumber}{12345}
+\newcommand{\myhometown}{Musterhausen}
+\newcommand{\myid}{123456789}
+
+%% Titel und PDF-Einstellungen
+\newcommand{\myworktype}{Projektarbeit}
+\newcommand{\myworktitle}{T3\_1000}
+\newcommand{\mytitle}{Titel einer sehr komplexen Arbeit}
+\newcommand{\mysubtitle}{ }
+\newcommand{\mysubject}{T3\_1000 von Max Mustermann}
+\newcommand{\mykeywords}{Key, Word}
+
+%% Dualer Partner
+\newcommand{\mydualpartner}{Ein Unternehmen AG}
+\newcommand{\mydualpartnerLocation}{12345 Unternehmertum}
+\newcommand{\mysupervisor}{Berthold Betreuer}
+
+%% Duale Hochschule
+\newcommand{\myuniversity}{Duale Hochschule Muster}
+\newcommand{\mycourse}{MUS-INFORMATIK}
+\newcommand{\mystudy}{Informatik}
+\newcommand{\myevaluator}{Prof. Dr. Dr. Müller}
+
+%% Datum
+\newcommand{\mysubmissionday}{1}
+\newcommand{\mysubmissionmonth}{April}
+\newcommand{\mysubmissionyear}{2020}
+
+\newcommand{\myprocessingperiodbegin}{01.01.2020}
+\newcommand{\myprocessingperiodend}{01.04.2020}
+
+%% ========================================================================
+%%%% Other settings
+%% ========================================================================
+
+%% !!FIRST!! Load preamble
+\input{template/preamble}
+
+%% !!LAST!! Do PDF settings
+\input{template/pdf_settings}
+
+%% ========================================================================
+%%%% begin{document}
+%% ========================================================================
+\begin{document}
+\sffamily
+\frontmatter
+
+%% Titelseite
+\input{template/title}
+%% Sperrvermerk
+\input{template/confidentiality_clause}
+%% Eidesstattliche Erklärung
+\input{template/declaration_affidavit}
+
+%% Abstract
+\include{chapters/chap0_abstract}
+
+%% Inhaltsverzeichnis
+\tableofcontents
+
+%% Marks main part using arabic page numbers and such; Only available in scrbook
+\mainmatter
+
+\input{chapters/chap1_introduction}
+
+\end{document}
