@@ -1,0 +1,71 @@
+%% ========================================================================
+%%%% Information
+%% ========================================================================
+%% Titelseite für Arbeiten mit der dualen Hochschule Mosbach und dem
+%% Unternehmen WIKA.
+%% Die anzuzeigenden Daten werden in der Datei main.tex festgelegt.
+
+\begin{titlepage}
+
+%% WIKA Logo
+\AddToShipoutPicture*{
+    \AtPageUpperLeft{
+        \hspace{\paperwidth}
+        \raisebox{-50mm}{
+            \makebox[-129mm][r]{\includegraphics[width=42mm]{template/figures/Company_Logo}}
+        }
+    }
+}
+
+%% DHBW Logo
+\AddToShipoutPicture*{
+    \AtPageUpperLeft{
+        \hspace{\paperwidth}
+        \raisebox{-52mm}{
+            \makebox[-39mm][r]{\includegraphics[width=42mm]{template/figures/University_Logo}}
+        }
+    }
+}
+
+\begin{center}
+~
+\vfill\vfill\vfill \vfill
+
+\sffamily
+
+{\LARGE\bfseries\mytitle}
+
+{\large\bfseries\mysubtitle}
+
+\vfill\vfill
+{\normalsize\bfseries\myworktype~\myworktitle}\\
+
+\vfill \vfill\vfill
+Im Studiengang \mystudy ~an der\\
+{\normalsize\bfseries\myuniversity}
+
+\vfill
+von\\
+\myauthor
+
+\vfill
+\mysubmissionday. \mysubmissionmonth~\mysubmissionyear
+
+\vfill\vfill\vfill
+\end{center}
+
+\sffamily{
+\begin{tabular}{ll}
+    Bearbeitungszeitraum & \myprocessingperiodbegin ~- \myprocessingperiodend \\
+    Matrikelnummer & \myid \\
+    Kurs & \mycourse \\
+    Ausbildungsfirma & \mydualpartner \\
+    & \mydualpartnerLocation \\
+    Betreuer der Ausbildungsfirma & \mysupervisor \\
+    Gutachter der Dualen Hochschule & \myevaluator \\
+\end{tabular}
+}
+
+\end{titlepage}
+
+\newpage
