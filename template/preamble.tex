@@ -41,6 +41,21 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 %% place things on absolute and relative positions on the whole page.
 \usepackage{eso-pic}
 
+%% List of abbreviations
+\usepackage{acronym}
+
+%% Use biblatex for bibliography
+%% With "Sorting=None" the numbering is done according to the order of appearance. 
+\usepackage[style=numeric,sorting=none]{biblatex}
+
+%% Used for quotes
+\usepackage{csquotes}
+
+%% Add default bibliography
+\addbibresource{etc/literature.bib}
+
+%% Give name to bibliography
+\bibliography{Literaturverzeichnis}
 %% ========================================================================
 %%%% Typographic settings
 %% ========================================================================
