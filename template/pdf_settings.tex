@@ -18,6 +18,7 @@ linkcolor=DispositionColor,
 citecolor=DispositionColor,
 anchorcolor=DispositionColor,
 colorlinks=\mycolorlinks,
+breaklinks
 ]{hyperref}
 
 %% all strings need to be loaded after hyperref was loaded with unicode support
@@ -29,3 +30,7 @@ pdfsubject = {\mysubject},
 pdfproducer = {\myauthor},
 pdfkeywords = {\mykeywords}
 }
+
+%% Break URLs in bibliography
+\PassOptionsToPackage{hyphens}{url}
+\setcounter{biburllcpenalty}{8000}
