@@ -110,6 +110,13 @@
 %% Abkürzungen
 \input{etc/acronyms}
 
+%% Abbildungsverzeichnis
+\addtocontents{lof}{\protect\addcontentsline{toc}{chapter}{\listfigurename}}
+\listoffigures
+
+%% Tabellenverzeichnis
+\listoftables
+
 %% Marks main part using arabic page numbers and such; Only available in scrbook
 \mainmatter
 
