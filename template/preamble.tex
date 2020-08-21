@@ -60,6 +60,7 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 
 %% Give name to bibliography
 \bibliography{Literaturverzeichnis}
+
 %% ========================================================================
 %%%% Typographic settings
 %% ========================================================================
@@ -69,6 +70,8 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 %% deactivated (set to 100~percent). Modify only with caution since it influences the
 %% page layout and could lead to ugly looking documents.
 \linespread{\mylinespread}
+
+\renewcommand*{\chapterheadstartvskip}{\vspace*{0\baselineskip}}% Abstand einstellen
 
 %% Reduce space between section and chapter headings
 \RedeclareSectionCommand[
@@ -80,6 +83,16 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
    beforeskip=0pt,
    afterskip=1sp
 ]{section}
+
+\RedeclareSectionCommand[
+   beforeskip=0pt,
+   afterskip=1sp
+]{subsection}
+
+\RedeclareSectionCommand[
+   beforeskip=0pt,
+   afterskip=1sp
+]{subsubsection}
 
 %% This document template is able to generate an output that uses colorized
 %% headings, captions, page numbers, and links. The color named
