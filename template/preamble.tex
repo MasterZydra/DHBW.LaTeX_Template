@@ -102,10 +102,45 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 %% here.
 %% Settings for colored links are handled by the definitions of the
 %% hyperref package
-
-%%\setheadsepline{.4pt}[\color{DispositionColor}]
-%%\renewcommand{\headfont}{\normalfont\sffamily\color{DispositionColor}}
-%%\renewcommand{\pnumfont}{\normalfont\sffamily\color{DispositionColor}}
+%% \setheadsepline{.4pt}[\color{DispositionColor}]
+\renewcommand{\headfont}{\normalfont\sffamily\color{DispositionColor}}
+\renewcommand{\pnumfont}{\normalfont\sffamily\color{DispositionColor}}
 \addtokomafont{disposition}{\color{DispositionColor}}
 \addtokomafont{caption}{\color{DispositionColor}\footnotesize}
 \addtokomafont{captionlabel}{\color{DispositionColor}}
+
+%% ========================================================================
+%%%% Source code highlighting
+%% ========================================================================
+
+%% Minted for source code highlighting
+\usepackage[newfloat]{minted}
+
+%%\BeforeBeginEnvironment{minted}{\medskip}
+%%\AfterEndEnvironment{minted}{\smallskip}
+
+%% XColor for color definitions
+\usepackage{xcolor}
+
+%% Define background color for style "friendly"
+\definecolor{friendlybg}{HTML}{f0f0f0}
+
+%% Settings for C# code
+\setminted[csharp]{
+    style=friendly,
+    bgcolor=friendlybg,
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize
+}
+
+\renewcommand{\listingname}{Auflistung}
+
+
+\usepackage{etoolbox}
+
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdofcolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\makeatother
