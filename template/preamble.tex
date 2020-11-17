@@ -125,14 +125,15 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 %% Define background color for style "friendly"
 \definecolor{friendlybg}{HTML}{f0f0f0}
 
-%% Settings for C# code
-\setminted[csharp]{
-    style=friendly,
-    bgcolor=friendlybg,
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\footnotesize
+%% Settings for source code
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\setminted{
+	bgcolor=codebg,
+	startinline=true,
+	obeytabs=true,
+	tabsize=4,
+	linenos,
+	breaklines
 }
 
 \renewcommand{\listingname}{Auflistung}
