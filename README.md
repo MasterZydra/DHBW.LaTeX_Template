@@ -2,9 +2,24 @@
 Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW.
 
 **Inhalt**  
+- [Aufbau](#aufbau)
 - [Auswahl und Anpassen des Deckblattes](#auswahl-und-anpassen-des-deckblattes)
+  - [Projektvorlage](#projektvorlage)
 - [Kapitel hinzufügen](#kapitel-hinzufügen)
 - [Hinweis bei der Verwendung von Overleaf.com](#hinweis-bei-der-verwendung-von-overleafcom)
+
+## Aufbau
+| Verzeichnis/Datei | Beschreibung |
+| --- | --- |
+| `chapters/` | Ablageverzeichnis für die ausformulierten Kapitel/Texte der Arbeit |
+| `etc/` | Verzeichnis für zusätzliche Dateien |
+| `etc/acronyms.tex` | Abkürzungsverzeichnis |
+| `etc/hyphenation.tex` | Auflistung von Wörtern mit ihrer Silbentrennung, wenn LaTex diese an der falschen Stelle trennt. |
+| `etc/literature.bib` | Literaturverzeichnis |
+| `img/` | Ablageverzeichnis für Bilder |
+| `template/` | Verzeichnis für Vorlagen und Grundeinstellungen des Dokumentes |
+| `template/title.tex` | Standarddeckblatt mit Angabe von DHBW-Betreuer und Zeitraum |
+| `template/dhbw_coverpage_projectreport` | Deckblatt nach für Projektarbeit (T3000) nach Vorgabe der DHBW |
 
 ## Auswahl und Anpassen des Deckblattes
 Es gibt mehrere Deckblätter aus denen gewählt werden kann. Die voreingestellte Auswahl `title` ist für größere Arbeiten geeignet, welche die Angabe von Bearbeitungszeitraum und DHBW-Betreuer benötigen. Für Projekte (wie die T3000) kann das Template `dhbw_coverpage_projectreport` genutzt werden. Hier gibt es keine Angaben zur DHBW bis auf die Matrikelnummer.
@@ -22,6 +37,7 @@ Die Vorlagen sind so aufgebaut, dass im Verzeichnis `template` kaum Änderungen 
 Alle anderen Werte sind in der Datei `main.tex` in den ersten beiden Abschnitten konfigurierbar.
 
 ### Projektvorlage
+Beispiel: [DHBW_ProjectReport_Template.pdf](DHBW_ProjectReport_Template.pdf)  
 Bei der Verwendung der Vorlage `dhbw_coverpage_projectreport` müssen folgende Felder befüllt werden:
 ```LaTex
 %% Student:
