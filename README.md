@@ -1,5 +1,5 @@
 # DHBW.LaTeX_Template
-Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW.
+Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW. Im Dokument [DHBW_Template.pdf](DHBW_Template.pdf) sieht man das Kompilat mit Beispielen für die Verwendung.
 
 **Inhalt**  
 - [Aufbau](#aufbau)
