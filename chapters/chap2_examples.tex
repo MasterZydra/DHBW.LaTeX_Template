@@ -119,6 +119,20 @@ Quellcode kann als Block oder im Fließtext stehen. Der Ausdruck \mintinline{pyt
 \end{minted}
 
 %% ---------------------------------------------
+%% Referenzen
+%% ---------------------------------------------
+\section{Referenzen}\label{sec_referenzen}
+Der Name einer Referenz wird mit \mintinline{LaTeX}{\label{name_der_referenz}} festgelegt. Für einen Abschnitt zum Beispiel: \mintinline{LaTeX}{\section{Referenzen}\label{sec_referenzen}}.
+
+Referenzen auf Bilder, Gleichungen, Kapitel oder andere Elemente können mit \mintinline{LaTeX}{\ref{name_der_referenz}} eingefügt werden. \\
+\textbf{Zum Beispiel:} Abbildung \ref{fig_example_pdf}, Abschnitt \ref{sec_referenzen} \\
+\textbf{Quellcode für Beispiel:} \mintinline{LaTeX}{Abbildung \ref{fig_example_pdf}, Abschnitt \ref{sec_referenzen}}
+
+Um automatisch das Präfix \glqq Abbildung\grqq{}, \glqq Gleichung\grqq{} oder \glqq  Abschnitt\grqq{} zu erhalten, kann der Befehl \mintinline{LaTeX}{\autoref{name_der_referenz}} genutzt werden. \\
+\textbf{Zum Beispiel:} \autoref{fig_example_pdf}, \autoref{sec_referenzen} \\
+\textbf{Quellcode für Beispiel:} \mintinline{LaTeX}{\autoref{fig_example_pdf}, \autoref{sec_referenzen}}
+
+%% ---------------------------------------------
 %% Zitieren
 %% ---------------------------------------------
 \section{Zitieren}
