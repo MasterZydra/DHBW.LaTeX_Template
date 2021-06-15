@@ -110,6 +110,7 @@ Mit dem Compiler \textit{pdfLaTeX} ist es möglich andere PDF-Dokumente wie ein 
 \section{Quellcode}
 Quellcode kann als Block oder im Fließtext stehen. Der Ausdruck \mintinline{python}{print(x**2)} ist ein Beispiel für Inline-Quelltext.
 
+Folgender Code-Block taucht nicht im Code-Verzeichnis auf:
 \begin{minted}{json}
 {   
     "id" : 1234,  
@@ -117,6 +118,17 @@ Quellcode kann als Block oder im Fließtext stehen. Der Ausdruck \mintinline{pyt
     "field2" : "welt"
 }
 \end{minted}
+
+Folgender Code-Block taucht im Code-Verzeichnis auf:
+\begin{code}{json}{Eine tolle Unterschrift von einem JSON-Codeblock}{code:json-label}
+{   
+    "id" : 1234,
+    "field1": "hallo",
+    "field2" : "welt"
+}
+\end{code}
+
+Codeblöcke können mit \mintinline{latex}{\ref{<labelname>}} referenziert werden, ungefähr so: \ref{code:json-label}.
 
 %% ---------------------------------------------
 %% Referenzen
