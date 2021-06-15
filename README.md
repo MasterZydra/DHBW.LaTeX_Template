@@ -19,7 +19,8 @@ Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW. Im Dokument [DH
 | `img/` | Ablageverzeichnis für Bilder |
 | `template/` | Verzeichnis für Vorlagen und Grundeinstellungen des Dokumentes |
 | `template/title.tex` | Standarddeckblatt mit Angabe von DHBW-Betreuer und Zeitraum |
-| `template/dhbw_coverpage_projectreport` | Deckblatt nach für Projektarbeit (T3000) nach Vorgabe der DHBW |
+| `template/dhbw_coverpage_bachelor.tex` | Deckblatt für Bachelorarbeit (T3300) nach Vorgabe der DHBW |
+| `template/dhbw_coverpage_projectreport` | Deckblatt für Projektarbeit (T3000) nach Vorgabe der DHBW |
 
 ## Auswahl und Anpassen des Deckblattes
 Es gibt mehrere Deckblätter aus denen gewählt werden kann. Die voreingestellte Auswahl `title` ist für größere Arbeiten geeignet, welche die Angabe von Bearbeitungszeitraum und DHBW-Betreuer benötigen. Für Projekte (wie die T3000) kann das Template `dhbw_coverpage_projectreport` genutzt werden. Hier gibt es keine Angaben zur DHBW bis auf die Matrikelnummer.
@@ -31,6 +32,8 @@ In `main.tex` kann die Auswahl für das Deckblatt getroffen werden:
 \input{template/title}
 %% Verwendung von Projekt-Deckblatt
 %% \input{template/dhbw_coverpage_projectreport}
+%% Verwendung von Projekt-Deckblatt
+%% \input{template/dhbw_coverpage_bachelor}
 ```
 
 Die Vorlagen sind so aufgebaut, dass im Verzeichnis `template` kaum Änderungen notwendig sind. Die Angaben wie Name, Titel der Projektarbeit ... werden in `main.tex` hinterlegt. Die Größe und Position von den Bildern auf dem Deckblatt muss im Template selbst angepasst werden.
