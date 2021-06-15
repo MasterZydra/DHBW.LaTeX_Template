@@ -125,6 +125,12 @@
 %% Tabellenverzeichnis
 \listoftables
 
+%% Code-Verzeichnis wenn Code-Blöcke irgendwo auftauchen
+\renewcommand\lstlistlistingname{Code-Verzeichnis} %Code-Verzeichnis
+\iftotallstlistings
+    \lstlistoflistings
+\fi
+
 %% Marks main part using arabic page numbers and such; Only available in scrbook
 \mainmatter
 
