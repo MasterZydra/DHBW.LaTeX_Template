@@ -152,3 +152,34 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 \AtBeginEnvironment{minted}{\dontdofcolorbox}
 \def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
 \makeatother
+
+%% for the code-block environment with listing and reference possibility:
+%% \begin{code}{<language>}{<caption>}{<label>} 
+%% ... 
+%% \end{code}
+%% is also used with listings so there is a list of code blocks
+\usepackage{listings}
+\usepackage[lstlisting]{totalcount}
+\renewcommand{\lstlistingname}{Code}
+\usepackage{caption}
+\captionsetup[lstlisting]{skip=5pt,belowskip=15pt} %spacing for the label
+%% the following see also here: https://github.com/gpoore/minted/issues/108
+\newcommand{\storeCaption}{}
+\newcommand{\storeLabel}{}
+\newenvironment{codelisting}{\captionsetup{type=lstlisting}}{}
+\newenvironment{code}[3]
+{%
+	\VerbatimEnvironment
+	\renewcommand{\storeCaption}{#2}%
+	\renewcommand{\storeLabel}{#3}%
+	\begin{minipage}{\linewidth}%
+	\begin{codelisting}%
+	\begin{minted}{#1}%
+	}
+	{%
+	\end{minted}%
+	\caption{\storeCaption}%
+	\label{\storeLabel}%
+	\end{codelisting}%
+	\end{minipage}\\%
+}
