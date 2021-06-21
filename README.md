@@ -2,11 +2,19 @@
 Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW. Im Dokument [DHBW_Template.pdf](DHBW_Template.pdf) sieht man das Kompilat mit Beispielen für die Verwendung.
 
 **Inhalt**  
+- [Features](#features)
 - [Aufbau](#aufbau)
 - [Auswahl und Anpassen des Deckblattes](#auswahl-und-anpassen-des-deckblattes)
   - [Projektvorlage](#projektvorlage)
 - [Kapitel hinzufügen](#kapitel-hinzufügen)
 - [Hinweis bei der Verwendung von Overleaf.com](#hinweis-bei-der-verwendung-von-overleafcom)
+
+## Features
+Die LaTeX-Vorlage verfügt über die folgenden Features:
+- Zentrale Konfiguration der Deckblätter über `main.tex`
+- Modularer Aufbau für eine gute Lesbarkeit und leichte Erweiterbarkeit
+- Automatisches Ausblenden von Abbildungs-, Tabellen- und Quellcode-Verzeichnis, wenn die Tabelle vorhanden ist.
+- Beispiele für die Verwendung verschiedener LaTeX-Befehle
 
 ## Aufbau
 | Verzeichnis/Datei | Beschreibung |
