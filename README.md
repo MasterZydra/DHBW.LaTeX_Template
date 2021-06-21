@@ -13,7 +13,7 @@ Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW. Im Dokument [DH
 Die LaTeX-Vorlage verfügt über die folgenden Features:
 - Zentrale Konfiguration der Deckblätter über `main.tex`
 - Modularer Aufbau für eine gute Lesbarkeit und leichte Erweiterbarkeit
-- Automatisches Ausblenden von Abbildungs-, Tabellen- und Quellcode-Verzeichnis, wenn die Tabelle vorhanden ist.
+- Automatisches Ausblenden von Abbildungs-, Tabellen- und Quellcode-Verzeichnis, wenn die entsprechende Tabelle leer ist.
 - Beispiele für die Verwendung verschiedener LaTeX-Befehle
 
 ## Aufbau
