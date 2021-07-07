@@ -178,7 +178,12 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
 	}
 	{%
 	\end{minted}%
-	\caption{\storeCaption}%
+	\caption{%
+	    {
+	    \setmintedinline{fontsize=\footnotesize}%
+	    \storeCaption %
+	    }%
+    	}%
 	\label{\storeLabel}%
 	\end{codelisting}%
 	\end{minipage}%
