@@ -8,6 +8,7 @@ Eine Vorlage für Studien-/Projekt-/Bachlorarbeiten an der DHBW. Im Dokument [DH
   - [Projektvorlage](#projektvorlage)
 - [Kapitel hinzufügen](#kapitel-hinzufügen)
 - [Hinweis bei der Verwendung von Overleaf.com](#hinweis-bei-der-verwendung-von-overleafcom)
+- [Website als Quelle mit HTML2BibLatex](#website-als-quelle-mit-html2biblatex)
 
 ## Features
 Die LaTeX-Vorlage verfügt über die folgenden Features:
@@ -98,3 +99,23 @@ Alle Kapitel werden in dem Verzeichnis `chapters` abgelegt. In `main.tex` werden
 Nach dem Hochladen der Dateien muss in den Einstellungen `main.tex` als **Main document** festgelegt werden.
 Beim Hochladen gibt es die Option eine Zip-Datei auszuwählen.
 Hier kann diese Verlage als Zip ausgewählt werden und erspart den manuellen Aufwand beim Anlegen der Verzeichnisstrukur.
+
+## Website als Quelle mit HTML2BibLatex
+Link zum offiziellen Repo: https://github.com/dmstern/html2biblatex
+
+Den folgenden Code als Adresse bei einem neuen Lesezeichen hinterlegen:
+```javascript
+javascript:"use strict";(function(){var _document$querySelect,_document$querySelect2,_document$querySelect3;function copyToClipboard(text){window.prompt("Copy to clipboard: Ctrl+C, Enter",text)}function jsDate2bibTex(date){var dd=date.getDate();var mm=date.getMonth()+1;var yyyy=date.getFullYear();if(dd<10){dd="0"+dd}if(mm<10){mm="0"+mm}return yyyy+"-"+mm+"-"+dd}function date2YearTex(date){var yyyy=date.getFullYear();return""+yyyy}var title=document.title;var url=document.URL;var author_tag=document.querySelector("[name=author]");var author=author_tag==null?"":author_tag.content;var today=new Date;var urldate=jsDate2bibTex(today);var publishedTime=(_document$querySelect=document.querySelector('meta[property="article:published_time"'))===null||_document$querySelect===void 0?void 0:_document$querySelect.getAttribute("content");var someTimeTag=(_document$querySelect2=document.querySelector("time[datetime]"))===null||_document$querySelect2===void 0?void 0:_document$querySelect2.getAttribute("datetime");var someTimeTagWithoutDatetime=(_document$querySelect3=document.querySelector("time"))===null||_document$querySelect3===void 0?void 0:_document$querySelect3.innerHTML;var lastModifiedTime=document.lastModified;var pageTime=new Date(publishedTime||someTimeTag||someTimeTagWithoutDatetime||lastModifiedTime);var date=jsDate2bibTex(pageTime);var year=date2YearTex(pageTime);var title_key=title.replace(/[^0-9a-z]/gi,"");var citationKey=title_key+"-"+date;var type="@online";var filename=":./references/"+window.location.pathname.slice(1).replace(/\//g,"-")+".html:html";
+const bibTexEntry = `${type} {${citationKey},\r
+   author  = "${author}",\r
+   title   = "${title}",\r
+   url     = "${url}",\r
+   date    = {${date}},\r
+   urldate = {${urldate}}\r}`;;alert(bibTexEntry)})();
+```
+Der Code fügt im Gegensatz zum Quellcode vom offiziellen Repo Zeilenumbrüche für eine bessere Lesbarkeit ein.
+
+Danke an [Jones1008](https://github.com/jones1008) für den Tipp und Code.
+
+![Html2Biblatex Beispiel](img/Html2Biblatex_Example.png)
+
