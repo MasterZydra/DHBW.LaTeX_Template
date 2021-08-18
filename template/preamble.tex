@@ -12,6 +12,13 @@ BCOR=\myBCOR,       %% binding correction (depends on how you bind the resulting
                     %% twoside: document is printed on left and right sides
 ]{scrbook}
 
+% set raggedbottom if \mylaterality is 'twoside' to prevent weird spaces between text blocks
+\makeatletter
+\if@twoside%
+    \raggedbottom
+\fi%  
+\makeatother
+
 %% Set paper and border size
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
 
